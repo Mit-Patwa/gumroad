@@ -122,6 +122,11 @@ const config = {
   context,
   entry,
   resolve: {
+    fallback: {
+      tty: false,
+      os: false,
+      util: false,
+    },
     extensions: [".js", ".ts", ".tsx"],
     modules: [...additionalPaths, "node_modules"],
     alias: {
